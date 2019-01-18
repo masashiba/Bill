@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Cash Register.xcodeproj">
+      location = "self:/Users/shibamotomasatoyo/Desktop/Life is Teck/Bill/Cash Register.xcodeproj">
    </FileRef>
 </Workspace>

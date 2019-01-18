@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0850C321CE62840018415D /* BoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0850C121CE62840018415D /* BoughtTableViewCell.swift */; };
+		BC0850C421CE62840018415D /* BoughtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0850C221CE62840018415D /* BoughtTableViewCell.xib */; };
+		BC090E8B21C3BA0A00B3ABF1 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC090E8921C3BA0A00B3ABF1 /* CustomTableViewCell.xib */; };
+		BC090E8D21C3BB7300B3ABF1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC090E8821C3BA0A00B3ABF1 /* CustomTableViewCell.swift */; };
 		BC6809ED21959686000E4757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6809EC21959686000E4757 /* AppDelegate.swift */; };
 		BC6809EF21959686000E4757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6809EE21959686000E4757 /* ViewController.swift */; };
 		BC6809F221959686000E4757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6809F021959686000E4757 /* Main.storyboard */; };
@@ -14,6 +18,10 @@
 		BC6809F721959687000E4757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6809F521959687000E4757 /* LaunchScreen.storyboard */; };
 		BC680A0221959687000E4757 /* Cash_RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680A0121959687000E4757 /* Cash_RegisterTests.swift */; };
 		BC680A0D21959687000E4757 /* Cash_RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680A0C21959687000E4757 /* Cash_RegisterUITests.swift */; };
+		BC680A1D21959CD2000E4757 /* KaimonoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680A1C21959CD2000E4757 /* KaimonoViewController.swift */; };
+		BC680A1F21959CE0000E4757 /* KaikeiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680A1E21959CE0000E4757 /* KaikeiViewController.swift */; };
+		BC680A2121959CF6000E4757 /* ShouhinTourokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC680A2021959CF6000E4757 /* ShouhinTourokuViewController.swift */; };
+		BCB38B8921F0577A00D02172 /* BoughtTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB38B8821F0577A00D02172 /* BoughtTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC0850C121CE62840018415D /* BoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtTableViewCell.swift; sourceTree = "<group>"; };
+		BC0850C221CE62840018415D /* BoughtTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoughtTableViewCell.xib; sourceTree = "<group>"; };
+		BC090E8821C3BA0A00B3ABF1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		BC090E8921C3BA0A00B3ABF1 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		BC6809E921959686000E4757 /* Cash Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cash Register.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6809EC21959686000E4757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC6809EE21959686000E4757 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,10 @@
 		BC680A0821959687000E4757 /* Cash RegisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash RegisterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC680A0C21959687000E4757 /* Cash_RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_RegisterUITests.swift; sourceTree = "<group>"; };
 		BC680A0E21959687000E4757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC680A1C21959CD2000E4757 /* KaimonoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaimonoViewController.swift; sourceTree = "<group>"; };
+		BC680A1E21959CE0000E4757 /* KaikeiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaikeiViewController.swift; sourceTree = "<group>"; };
+		BC680A2021959CF6000E4757 /* ShouhinTourokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShouhinTourokuViewController.swift; sourceTree = "<group>"; };
+		BCB38B8821F0577A00D02172 /* BoughtTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +95,7 @@
 			children = (
 				BC6809EB21959686000E4757 /* Cash Register */,
 				BC680A0021959687000E4757 /* Cash RegisterTests */,
-				BC680A0B21959687000E4757 /* Cash RegisterUITests */,
+				BC680A0B21959687000E4757 /* Cash RegisterTests */,
 				BC6809EA21959686000E4757 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,11 +114,19 @@
 			isa = PBXGroup;
 			children = (
 				BC6809EC21959686000E4757 /* AppDelegate.swift */,
-				BC6809EE21959686000E4757 /* ViewController.swift */,
-				BC6809F021959686000E4757 /* Main.storyboard */,
 				BC6809F321959687000E4757 /* Assets.xcassets */,
-				BC6809F521959687000E4757 /* LaunchScreen.storyboard */,
+				BC6809F021959686000E4757 /* Main.storyboard */,
 				BC6809F821959687000E4757 /* Info.plist */,
+				BC6809F521959687000E4757 /* LaunchScreen.storyboard */,
+				BC680A1E21959CE0000E4757 /* KaikeiViewController.swift */,
+				BC680A1C21959CD2000E4757 /* KaimonoViewController.swift */,
+				BC680A2021959CF6000E4757 /* ShouhinTourokuViewController.swift */,
+				BC6809EE21959686000E4757 /* ViewController.swift */,
+				BC0850C121CE62840018415D /* BoughtTableViewCell.swift */,
+				BC0850C221CE62840018415D /* BoughtTableViewCell.xib */,
+				BC090E8821C3BA0A00B3ABF1 /* CustomTableViewCell.swift */,
+				BC090E8921C3BA0A00B3ABF1 /* CustomTableViewCell.xib */,
+				BCB38B8821F0577A00D02172 /* BoughtTableView.swift */,
 			);
 			path = "Cash Register";
 			sourceTree = "<group>";
@@ -116,13 +140,14 @@
 			path = "Cash RegisterTests";
 			sourceTree = "<group>";
 		};
-		BC680A0B21959687000E4757 /* Cash RegisterUITests */ = {
+		BC680A0B21959687000E4757 /* Cash RegisterTests */ = {
 			isa = PBXGroup;
 			children = (
 				BC680A0C21959687000E4757 /* Cash_RegisterUITests.swift */,
 				BC680A0E21959687000E4757 /* Info.plist */,
 			);
-			path = "Cash RegisterUITests";
+			name = "Cash RegisterTests";
+			path = BillUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +256,8 @@
 			files = (
 				BC6809F721959687000E4757 /* LaunchScreen.storyboard in Resources */,
 				BC6809F421959687000E4757 /* Assets.xcassets in Resources */,
+				BC090E8B21C3BA0A00B3ABF1 /* CustomTableViewCell.xib in Resources */,
+				BC0850C421CE62840018415D /* BoughtTableViewCell.xib in Resources */,
 				BC6809F221959686000E4757 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC090E8D21C3BB7300B3ABF1 /* CustomTableViewCell.swift in Sources */,
+				BC680A1D21959CD2000E4757 /* KaimonoViewController.swift in Sources */,
+				BC680A2121959CF6000E4757 /* ShouhinTourokuViewController.swift in Sources */,
 				BC6809EF21959686000E4757 /* ViewController.swift in Sources */,
+				BCB38B8921F0577A00D02172 /* BoughtTableView.swift in Sources */,
+				BC680A1F21959CE0000E4757 /* KaikeiViewController.swift in Sources */,
+				BC0850C321CE62840018415D /* BoughtTableViewCell.swift in Sources */,
 				BC6809ED21959686000E4757 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
