@@ -18,19 +18,18 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
     var NameArray = [String]()
     var PriceArray = [Int]()
     
-    //UserDefaultsの宣言
-    var saveDate: UserDefaults = UserDefaults.standard
+    var saveDate: UserDefaults = UserDefaults.standard //UserDefaultsの宣言
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) { //viewが表示された時
         
         NameTextField.delegate = self
         
-        ////UserDefaultsに配列がある場合のみ（一個も商品登録をしていない時への配慮）、その配列を取り出す
+        //UserDefaultsに配列がある場合のみ（一個も商品登録をしていない時への配慮）、その配列を取り出す
         if saveDate.array(forKey: "NameArray") != nil {
             NameArray = saveDate.array(forKey: "NameArray") as! [String]
         }
@@ -38,12 +37,15 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
             PriceArray = saveDate.array(forKey: "PriceArray") as! [Int]
         }
         
-        //値段の入力キーボードを数字だけに
-        PriceTextField.keyboardType = UIKeyboardType.numberPad
+        PriceTextField.keyboardType = UIKeyboardType.numberPad //値段の入力キーボードを数字だけに
     }
     
-        
-        // Do any additional setup after loading the view.
+    //キーボード以外のところをタッチした時、キーボードをしまう
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.NameTextField.endEditing(true)
+        self.PriceTextField.endEditing(true)
+    }
+    
     //登録ボタンを押した時
     @IBAction func Registration() {
         
@@ -90,11 +92,6 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //キーボード以外のところをタッチした時、キーボードをしまう
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.NameTextField.endEditing(true)
-        self.PriceTextField.endEditing(true)
-    }
     
     /*
      // MARK: - Navigation

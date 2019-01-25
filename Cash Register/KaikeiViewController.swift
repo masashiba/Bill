@@ -26,16 +26,15 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //TableViewの空白cellの線を消す
-        table.tableFooterView = UIView()
+        table.tableFooterView = UIView() //TableViewの空白cellの線を消す
         
         table.dataSource = self
         custody.delegate = self
         
         self.table.register(UINib(nibName: "BoughtTableViewCell", bundle: nil), forCellReuseIdentifier: "BoughtCell")
         
-        for i in 0...(BoughtNameArray.count - 1) {
-           total += BoughtPriceArray[i] * BoughtCountArray[i]
+        for i in 0...(BoughtNameArray.count - 1) { //買った商品の数分の回数
+           total += BoughtPriceArray[i] * BoughtCountArray[i] //合計金額に買った商品のね金額を足す
         }
         
         //お預かり入力を数字だけに
@@ -56,14 +55,12 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //セルの数は買った商品の数
-        return BoughtNameArray.count
+        return BoughtNameArray.count //セルの数は買った商品の数
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //cellを作成
-        let cell = table.dequeueReusableCell(withIdentifier: "BoughtCell") as! BoughtTableViewCell
+        let cell = table.dequeueReusableCell(withIdentifier: "BoughtCell") as! BoughtTableViewCell //cellを作成
         //cellに買った商品の情報をのせる
         cell.NameLabel.text = "\(BoughtNameArray[indexPath.row])(￥\(BoughtPriceArray[indexPath.row]))"
         cell.CountLabel.text = "\(BoughtCountArray[indexPath.row])個"
@@ -83,6 +80,7 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
         
     }
     
+    //TableViewのフッターに合計金額を表示
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "計 ￥\(total)"
     }
@@ -97,9 +95,11 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     }
     
     func reconing() {
-        self.custody.endEditing(true)
-        if custody.text != String() {
-        if Int(custody.text!)! < total {
+        self.custody.endEditing(true) //キーボードを閉じる
+        if custody.text != String() { //お預かり金額が入力されている時
+        if Int(custody.text!)! < total { //お預かり金額がお支払い金額より少ない時
+            
+            //alertを表示
             let alert: UIAlertController = UIAlertController(title: "エラー", message: "お支払金額が不足しています", preferredStyle: .alert)
             
             alert.addAction(
@@ -112,13 +112,13 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
             ))
             present(alert, animated: true, completion: nil)
             
-            ChangeLabel.text = String()
+            ChangeLabel.text = String() //お釣りのlabelを白紙に
             
         } else {
-            ChangeLabel.text = String(Int(custody.text!)! - total)
+            ChangeLabel.text = String(Int(custody.text!)! - total) //お釣りを表示する
         }
         } else {
-            ChangeLabel.text = String()
+            ChangeLabel.text = String() //お釣りのlabelを白紙に
         }
     }
     

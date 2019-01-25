@@ -9,9 +9,8 @@
 import UIKit
 
 class KaimonoViewController: UIViewController,UITableViewDataSource {
-
-    //商品情報を受け取るためのUserDefaultsの宣言
-    var saveDate : UserDefaults = UserDefaults.standard
+    
+    @IBOutlet var table : UITableView! //商品を並べるTableViewの宣言
     
     //商品情報を入れる配列の宣言
     var NameArray = [String]()
@@ -20,23 +19,26 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
     var BoughtNameArray = [String]()
     var BoughtPriceArray = [Int]()
     var BoughtCountArray = [Int]()
-    //CustomCellを入れるための配列
-    var CellArray = [CustomTableViewCell]()
     
-    //商品を並べるTableViewの宣言
-    @IBOutlet var table : UITableView!
+    var CellArray = [CustomTableViewCell]() //CustomCellを入れるための配列
+    
+    var saveDate : UserDefaults = UserDefaults.standard //商品情報を受け取るためのUserDefaultsの宣言
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TableViewの空白cellの線を消す
-        table.tableFooterView = UIView()
+        table.tableFooterView = UIView()//TableViewの空白cellの線を消す
+        
+        
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) { //viewが表示されたとき
         
         table.dataSource = self
+        
+        print(NameArray)
+        print(PriceArray)
         
         //CustomCellを呼び出せる状態にする
         self.table.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
@@ -49,30 +51,27 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
             PriceArray = saveDate.array(forKey: "PriceArray") as! [Int]
         }
         
-        
         if NameArray.count > 0 {
             
-            //CellArrayの中身をリセット（空にする）
-            CellArray = [CustomTableViewCell]()
+            CellArray = [CustomTableViewCell]()  //CellArrayの中身をリセット（空にする）
             
-            //cellの数だけ
-            for i in 0...NameArray.count - 1 {
+            for i in 0...NameArray.count - 1 { //cellの数だけ
                 
-                //CustomCellを作る
-                let cell = table.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
+                let cell = table.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell //商品情報をのせるセルを作る
                 
-                //CustomCellに商品の情報をのせる
+                //セルに商品情報をのせる
                 cell.NameLabel.text = NameArray[i]
                 cell.PriceLabel.text = "￥" + String(PriceArray[i])
                 
-                //作ったセルを配列に入れる
-                CellArray.append(cell)
+                CellArray.append(cell) //作ったセルを配列に入れる
                 
             }
             
         }
-        //TableViewを更新
-        table.reloadData()
+        
+        table.reloadData() //TableViewを更新
+        print(NameArray)
+        print(PriceArray)
     }
     
     //商品登録した後segueでこの画面に戻ってくるメソッド
@@ -80,18 +79,13 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         
     }
     
-    //セルの数は
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //配列の数
-        return NameArray.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //セルの数は
+        return CellArray.count //配列の数
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //CellArrayに入っているセルを上から順番に代入していく
-        return CellArray[indexPath.row]
-        
+        return CellArray[indexPath.row] //CellArrayに入っているセルを上から順番に代入していく
     }
     
     //セルを削除＆配列内からそのデータも削除
@@ -99,12 +93,15 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         
             NameArray.remove(at: indexPath.row)
             PriceArray.remove(at: indexPath.row)
-            
+            CellArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+        
         
         //UserDefaultsに配列を保存
         saveDate.set(NameArray, forKey: "NameArray")
         saveDate.set(PriceArray, forKey: "PriceArray")
+        print(NameArray)
+        print(PriceArray)
     }
     
     @IBAction func Kaikei() {
@@ -168,7 +165,6 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         
         if segue.identifier == "ToTouroku" {
             //UserDefaultsに配列を保存
