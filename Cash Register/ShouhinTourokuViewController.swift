@@ -52,12 +52,26 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
         //商品名も金額も入力されている時
         if NameTextField.text != "" && PriceTextField.text != "" {
             
-            //入力された情報を配列に追加
-            NameArray.append(NameTextField.text!)
-            PriceArray.append(Int(PriceTextField.text!)!)
-            
-            //画面遷移
-            performSegue(withIdentifier: "Touroku", sender: nil)
+            if NameArray.contains(NameTextField.text!) {
+                let alert: UIAlertController = UIAlertController(title: "エラー", message: "この商品はすでに登録されています", preferredStyle: .alert)
+                
+                alert.addAction(
+                    UIAlertAction(
+                        title:"OK",
+                        style: .default,
+                        handler: { action in
+                            
+                    }
+                ))
+                present(alert, animated: true, completion: nil)
+            } else {
+                //入力された情報を配列に追加
+                NameArray.append(NameTextField.text!)
+                PriceArray.append(Int(PriceTextField.text!)!)
+                
+                //画面遷移
+                performSegue(withIdentifier: "Touroku", sender: nil)
+            }
             
         } else {
             
