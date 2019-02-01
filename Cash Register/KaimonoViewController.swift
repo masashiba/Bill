@@ -91,17 +91,38 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
     //セルを削除＆配列内からそのデータも削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-            NameArray.remove(at: indexPath.row)
-            PriceArray.remove(at: indexPath.row)
-            CellArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        let alert: UIAlertController = UIAlertController(title: "確認", message: "「\(NameArray[indexPath.row])」を削除しますか？", preferredStyle: .alert)
+        
+        alert.addAction(
+            UIAlertAction(
+                title:"削除",
+                style: .default,
+                handler: { action in
+                    self.NameArray.remove(at: indexPath.row)
+                    self.PriceArray.remove(at: indexPath.row)
+                    self.CellArray.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                    
+                    
+                    //UserDefaultsに配列を保存
+                    self.saveDate.set(self.NameArray, forKey: "NameArray")
+                    self.saveDate.set(self.PriceArray, forKey: "PriceArray")
+            }
+        ))
+        
+        alert.addAction(
+            UIAlertAction(
+                title:"キャンセル",
+                style: .cancel,
+                handler: { action in
+                    
+            }
+        ))
+        present(alert, animated: true, completion: nil)
         
         
-        //UserDefaultsに配列を保存
-        saveDate.set(NameArray, forKey: "NameArray")
-        saveDate.set(PriceArray, forKey: "PriceArray")
-        print(NameArray)
-        print(PriceArray)
+        
     }
     
     @IBAction func Kaikei() {
