@@ -97,7 +97,7 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         alert.addAction(
             UIAlertAction(
                 title:"削除",
-                style: .default,
+                style: .destructive,
                 handler: { action in
                     self.NameArray.remove(at: indexPath.row)
                     self.PriceArray.remove(at: indexPath.row)
