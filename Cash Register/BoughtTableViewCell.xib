@@ -18,28 +18,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-XH-doN">
-                        <rect key="frame" x="16" y="9" width="131" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-XH-doN">
+                        <rect key="frame" x="16" y="9.5" width="160" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-YW-0Kb">
-                        <rect key="frame" x="155" y="9" width="47" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99個" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-YW-0Kb">
+                        <rect key="frame" x="180" y="9.5" width="39" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMD-Fb-IUI">
-                        <rect key="frame" x="210" y="8" width="94" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥990000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMD-Fb-IUI">
+                        <rect key="frame" x="224" y="9.5" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="gpq-2X-LqW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="sMD-Fb-IUI" firstAttribute="centerY" secondItem="fAc-XH-doN" secondAttribute="centerY" id="BVk-BZ-Ngz"/>
+                    <constraint firstAttribute="trailing" secondItem="sMD-Fb-IUI" secondAttribute="trailing" multiplier="1.05263" id="GS9-Yx-bwT"/>
+                    <constraint firstItem="Gef-YW-0Kb" firstAttribute="centerY" secondItem="fAc-XH-doN" secondAttribute="centerY" id="Sbx-Jf-Iax"/>
+                    <constraint firstItem="fAc-XH-doN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iPV-iB-Rsl"/>
+                    <constraint firstItem="Gef-YW-0Kb" firstAttribute="leading" secondItem="fAc-XH-doN" secondAttribute="trailing" constant="4" id="ozd-cn-BVE"/>
+                    <constraint firstItem="Gef-YW-0Kb" firstAttribute="trailing" secondItem="sMD-Fb-IUI" secondAttribute="leading" constant="-5" id="qNN-i3-3Fo"/>
+                    <constraint firstItem="fAc-XH-doN" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="rIH-HM-rRO"/>
+                    <constraint firstItem="fAc-XH-doN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.6" id="wLr-hH-cog"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

@@ -29,16 +29,12 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         
         table.tableFooterView = UIView()//TableViewの空白cellの線を消す
         
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) { //viewが表示されたとき
         
         table.dataSource = self
-        
-        print(NameArray)
-        print(PriceArray)
         
         //CustomCellを呼び出せる状態にする
         self.table.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
@@ -70,8 +66,6 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         }
         
         table.reloadData() //TableViewを更新
-        print(NameArray)
-        print(PriceArray)
     }
     
     //商品登録した後segueでこの画面に戻ってくるメソッド

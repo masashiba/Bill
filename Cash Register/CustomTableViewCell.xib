@@ -18,35 +18,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-Np-IGC">
-                        <rect key="frame" x="44" y="11" width="113" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vBN-xM-qEO">
-                        <rect key="frame" x="165" y="30" width="94" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vBN-xM-qEO">
+                        <rect key="frame" x="161" y="28" width="94" height="29"/>
                         <connections>
                             <action selector="changeStepperValueWithStepper:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v4n-Z9-kDt"/>
                         </connections>
                     </stepper>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="値段" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw1-VW-oup">
-                        <rect key="frame" x="44" y="46" width="113" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-if-4BP">
+                        <rect key="frame" x="263" y="32" width="33" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="QAS-QT-wYP"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-if-4BP">
-                        <rect key="frame" x="267" y="34" width="32" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ld-Np-IGC">
+                        <rect key="frame" x="24" y="18" width="128" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="値段" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw1-VW-oup">
+                        <rect key="frame" x="24" y="47" width="128" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Jw1-VW-oup" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.55" id="9V0-D5-GIE"/>
+                    <constraint firstItem="vBN-xM-qEO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="F56-5u-mSi"/>
+                    <constraint firstItem="vBN-xM-qEO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1.3" id="Idh-gM-Eif"/>
+                    <constraint firstItem="Jw1-VW-oup" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="14.800000000000001" id="Rlw-QG-NOc"/>
+                    <constraint firstItem="Jw1-VW-oup" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="Too-6C-Rtq"/>
+                    <constraint firstItem="5ld-Np-IGC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-14.199999999999999" id="fF4-ky-OSu"/>
+                    <constraint firstItem="5ld-Np-IGC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="0.55" id="fei-Ff-WSw"/>
+                    <constraint firstAttribute="trailing" secondItem="k6b-if-4BP" secondAttribute="trailing" multiplier="1.08108" id="fqV-TO-gT4"/>
+                    <constraint firstItem="k6b-if-4BP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i9e-7l-IEm"/>
+                    <constraint firstItem="5ld-Np-IGC" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="sWe-dY-ej5"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
