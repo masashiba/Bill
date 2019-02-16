@@ -27,4 +27,11 @@ class BoughtTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        NameLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height * 2 / 5)
+        CountLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height * 2 / 5)
+        PriceLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height * 2 / 5)
+        
+    }
 }

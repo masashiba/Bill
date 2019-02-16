@@ -13,6 +13,9 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
     //商品の情報入力部分の宣言
     @IBOutlet var NameTextField: UITextField!
     @IBOutlet weak var PriceTextField: UITextField!
+    @IBOutlet var Shouhinmei: UILabel!
+    @IBOutlet var Kingaku: UILabel!
+    @IBOutlet var en: UILabel!
     
     //商品情報の配列の宣言
     var NameArray = [String]()
@@ -23,6 +26,15 @@ class ShouhinTourokuViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        Shouhinmei.font = UIFont(name: "HiraginoSans-W3", size: Shouhinmei.frame.size.height)
+        Kingaku.font = UIFont(name: "HiraginoSans-W3", size: Shouhinmei.frame.size.height)
+        NameTextField.font = UIFont(name: "HiraginoSans-W3", size: Shouhinmei.frame.size.height)
+        PriceTextField.font = UIFont(name: "HiraginoSans-W3", size: Shouhinmei.frame.size.height)
+        en.font = UIFont(name: "HiraginoSans-W3", size: en.frame.size.width)
     }
     
     override func viewWillAppear(_ animated: Bool) { //viewが表示された時

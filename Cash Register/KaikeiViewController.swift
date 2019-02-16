@@ -18,6 +18,10 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     @IBOutlet var table: UITableView!
     //お釣りを表示するlabel
     @IBOutlet var ChangeLabel: UILabel!
+    @IBOutlet var Oazukari: UILabel!
+    @IBOutlet var Oturi: UILabel!
+    @IBOutlet var enone : UILabel!
+    @IBOutlet var entwo: UILabel!
     //合計金額を入れる変数
     var total: Int = 0
     //お預かり金額のTextField
@@ -26,6 +30,7 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        table.rowHeight = UIScreen.main.bounds.size.width / 8
         table.tableFooterView = UIView() //TableViewの空白cellの線を消す
         
         table.dataSource = self
@@ -52,6 +57,17 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
         custody.inputAccessoryView = DoneView
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        Oazukari.font = UIFont(name: "HiraginoSans-W3", size: Oazukari.frame.size.width / 4)
+        Oturi.font = UIFont(name: "HiraginoSans-W3", size: Oazukari.frame.size.width / 4)
+        custody.font = UIFont(name: "HiraginoSans-W3", size: Oazukari.frame.size.width / 4)
+        ChangeLabel.font = UIFont(name: "HiraginoSans-W3", size: Oazukari.frame.size.width / 4)
+        enone.font = UIFont(name: "HiraginoSans-W3", size: enone.frame.size.width)
+        entwo.font = UIFont(name: "HiraginoSans-W3", size: enone.frame.size.width)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,7 +98,7 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
     
     //TableViewのフッターに合計金額を表示
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "計 ￥\(total)"
+        return " 計 ￥\(total)"
     }
     
     //キーボード以外のところをタッチした時、キーボードをしまう

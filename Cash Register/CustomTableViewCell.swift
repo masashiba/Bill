@@ -25,6 +25,14 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        NameLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height / 5)
+        PriceLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height / 5)
+        CountLabel.font = UIFont(name: "HiraginoSans-W3", size: self.contentView.frame.size.height / 5)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

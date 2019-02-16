@@ -11,6 +11,8 @@ import UIKit
 class KaimonoViewController: UIViewController,UITableViewDataSource {
     
     @IBOutlet var table : UITableView! //商品を並べるTableViewの宣言
+    @IBOutlet var TourokuButton : UIButton!
+    @IBOutlet var KaikeiButton : UIButton!
     
     //商品情報を入れる配列の宣言
     var NameArray = [String]()
@@ -28,6 +30,13 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         super.viewDidLoad()
         
         table.tableFooterView = UIView()//TableViewの空白cellの線を消す
+        TourokuButton.titleLabel?.font = UIFont(name: "HiraginoSans-W6", size: UIScreen.main.bounds.size.width / 20)
+        KaikeiButton.titleLabel?.font = UIFont(name: "HiraginoSans-W6", size: UIScreen.main.bounds.size.width / 20)
+        TourokuButton.layer.cornerRadius = TourokuButton.frame.size.height / 4
+        KaikeiButton.layer.cornerRadius = KaikeiButton.frame.size.height / 4
+        
+        table.rowHeight = UIScreen.main.bounds.size.width / 4
+        
         
         // Do any additional setup after loading the view.
     }
