@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpV-uf-OPY">
                                 <rect key="frame" x="48" y="417.5" width="224" height="56"/>
-                                <color key="backgroundColor" red="0.93442320823669434" green="0.76349753141403198" blue="0.33319652080535889" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.76470588235294112" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IpV-uf-OPY" secondAttribute="height" multiplier="4:1" id="YOk-s5-87H"/>
                                 </constraints>
@@ -219,7 +219,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-6G-ODD">
                                 <rect key="frame" x="142.5" y="521.5" width="137.5" height="32"/>
-                                <color key="backgroundColor" red="0.93442320820000002" green="0.76349753139999998" blue="0.33319652080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.76470588235294112" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PSZ-6G-ODD" secondAttribute="height" multiplier="69:16" id="azr-Fh-unv"/>
                                 </constraints>

@@ -24,6 +24,7 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor(red: 245 / 255, green: 244 / 255, blue: 240 / 255, alpha: 1)
     }
     
     override func layoutSubviews() {

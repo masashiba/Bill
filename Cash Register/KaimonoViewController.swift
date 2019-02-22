@@ -37,8 +37,18 @@ class KaimonoViewController: UIViewController,UITableViewDataSource {
         
         table.rowHeight = UIScreen.main.bounds.size.width / 4
         
+        navigationItem.rightBarButtonItem = editButtonItem
+        
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        
+        super.setEditing(editing, animated: animated)
+        table.setEditing(editing, animated: animated)
+        table.isEditing = editing
+        
     }
     
     override func viewWillAppear(_ animated: Bool) { //viewが表示されたとき

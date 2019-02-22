@@ -45,14 +45,15 @@ class KaikeiViewController: UIViewController,UITableViewDataSource,UITextFieldDe
         //お預かり入力を数字だけに
         custody.keyboardType = UIKeyboardType.numberPad
         configureObserver()  //Notification発行
-        let DoneView = UIView(frame: CGRect(x:0,y:0,width:320,height:40))
-        DoneView.backgroundColor = UIColor.black
-        let done = UIButton(frame: CGRect(x:0,y:0,width:40,height:25))
+        let DoneView = UIView(frame: CGRect(x:0,y:0,width:UIScreen.main.bounds.size.width ,height:UIScreen.main.bounds.size.width / 10))
+        DoneView.backgroundColor = UIColor.white
+        let done = UIButton(frame: CGRect(x: DoneView.frame.size.width - DoneView.frame.size.height * 2, y: 0, width: DoneView.frame.size.height * 2, height: DoneView.frame.size.height))
         done.setTitle("完了", for: UIControl.State.normal)
         done.addTarget(self,
                        action: #selector(KaikeiViewController.done(sender:)),
                        for: .touchUpInside)
-        done.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+        done.titleLabel?.font =  UIFont(name: "HiraginoSans-W3", size: done.frame.size.height * 0.5)
+        done.setTitleColor(UIColor(red: 238 / 255, green: 195 / 255, blue: 85 / 255, alpha: 1), for: UIControl.State.normal)
         DoneView.addSubview(done)
         custody.inputAccessoryView = DoneView
         
